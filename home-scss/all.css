@@ -1,0 +1,607 @@
+@charset "UTF-8";
+/* 20px */
+/* 24px */
+/* 36px */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*--------------------header內容 -------------------------- */
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.navbar .toggler {
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.navbar .collapse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 0px;
+}
+
+.navbar .link {
+  padding-left: 30px;
+}
+
+.navbar .link:hover {
+  color: #FFE180;
+}
+
+.navbar .active {
+  max-height: 200px;
+}
+
+.nav .link {
+  padding-left: 30px;
+  color: #3F5D45;
+  font-weight: bold;
+  padding: 0 30px;
+  display: block;
+}
+
+/*--------------------header RWD 開始 -------------------------- */
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .navbar .toggler {
+    display: block;
+  }
+  .navbar .toggler:focus {
+    outline: 0;
+  }
+  .navbar .nav {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    overflow: hidden;
+    /* 讓超出預設區域的文字被隱藏起來 */
+    background: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar link {
+    padding-left: 0;
+  }
+  .nav link {
+    padding: 10px 0;
+    text-align: center;
+  }
+  .nav .item {
+    color: #3F5D45;
+    width: 100%;
+    text-align: center;
+  }
+  .nav .item:hover {
+    background-color: #EAF0ED;
+  }
+}
+
+/*--------------------header RWD 結束 -------------------------- */
+.banner {
+  margin-bottom: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: #3F5D45;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.dessert {
+  width: 300px;
+  color: #3F5D45;
+  text-align: center;
+  line-height: 31px;
+  font-weight: bold;
+}
+
+.dessert li {
+  border: 1px solid #EAF0ED;
+}
+
+.dessert li a {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: block;
+}
+
+.dessert ul :hover {
+  background-color: #EAF0ED;
+}
+
+.dessert h3 {
+  background-color: #3F5D45;
+  color: white;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* 以上左邊選單 */
+.macaron {
+  width: 300px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+.macaron-img {
+  position: relative;
+}
+
+.macaron-img p {
+  font-weight: bold;
+  font-size: 16px;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  position: absolute;
+  left: 20px;
+  background-color: #3F5D45;
+  color: white;
+  padding: 10px;
+  letter-spacing: 5px;
+}
+
+.favorite {
+  position: absolute;
+  right: 22px;
+  top: 19px;
+}
+
+.caramel {
+  color: #3F5D45;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.name {
+  text-align: center;
+  width: 50%;
+  border-left: 1px solid #EAF0ED;
+  font-weight: 300;
+  padding: 14px 0;
+}
+
+.price {
+  width: 50%;
+  border-left: 1px solid #EAF0ED;
+  border-right: 1px solid #EAF0ED;
+  font-weight: 600;
+  padding: 14px 0;
+  text-align: center;
+}
+
+.buycar {
+  width: 300px;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 24px;
+  color: #3F5D45;
+  font-weight: bold;
+  cursor: pointer;
+  /* 讓使用者知道可以點選 */
+}
+
+.buycar:hover {
+  color: white;
+  background-color: #3F5D45;
+}
+
+.product {
+  width: 620px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/*  以上右邊選單 */
+/*--------------------contact RWD開始 -------------------------- */
+@media (max-width: 768px) {
+  .dessert {
+    width: 100%;
+  }
+  .dessert ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .dessert li {
+    width: 50%;
+  }
+  .product {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .dessert {
+    margin-bottom: 30px;
+  }
+  .dessert li {
+    width: 100%;
+  }
+  .product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .email {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .email ul {
+    padding-bottom: 33px;
+  }
+}
+
+/*--------------------contact RWD 結束 -------------------------- */
+.type {
+  margin-bottom: 60px;
+}
+
+.type Ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.type li:hover {
+  background-color: #3F5D45;
+}
+
+.typeleft, .typeright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 59px;
+  border: 1px solid #EAF0ED;
+}
+
+.typenumber {
+  border: 1px solid #EAF0ED;
+  text-align: center;
+  display: block;
+  background-color: #ffffff;
+  font-size: 20px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  width: 59px;
+}
+
+/*  以上右下角列表 */
+/*--------------------type RWD開始 -------------------------- */
+@media (max-width: 767px) {
+  .type {
+    padding-right: 39px;
+  }
+}
+
+/*--------------------footer內容 -------------------------- */
+.email {
+  background-color: #3F5D45;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+.order {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.order p {
+  padding-left: 20px;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.mailIcon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 20px;
+  top: 16px;
+}
+
+.subform {
+  width: 380px;
+  position: relative;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.formail {
+  width: 80%;
+  padding: 16px 16px 16px 64px;
+  border: none;
+  line-height: 26px;
+}
+
+.forWard {
+  border: none;
+  width: 64px;
+  height: 56px;
+  background-color: #FFE180;
+}
+
+.forWard img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.send {
+  display: block;
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/arrow_forward-24px.png);
+  width: 64px;
+  position: absolute;
+  cursor: pointer;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+  top: -0.1%;
+  left: 80%;
+  background-color: #FFE180;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 表尾 */
+.footer {
+  color: #3F5D45;
+  background-color: #FFFFFF;
+}
+
+.footer-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.footer-last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.sweet img {
+  padding-top: 39px;
+  padding-bottom: 115px;
+}
+
+.sweet li {
+  line-height: 24px;
+}
+
+.today h2 {
+  padding-top: 30px;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-indent: 16px;
+  font-weight: 900;
+  line-height: 29px;
+  font-size: 1.5rem;
+}
+
+.socail ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.socail img {
+  padding-bottom: 23px;
+  padding-right: 8px;
+}
+
+/*--------------------footer RWD開始 -------------------------- */
+@media (max-width: 768px) {
+  .today h2 {
+    padding-right: 30px;
+  }
+  .all-right {
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .email {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .order {
+    padding-bottom: 30px;
+  }
+  .today h2 {
+    display: none;
+  }
+  .footer {
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 30px;
+  }
+  .footer-last {
+    display: block;
+  }
+}
+
+/*--------------------footer RWD結束 -------------------------- */
+/*# sourceMappingURL=all.css.map */

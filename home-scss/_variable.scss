@@ -1,0 +1,28 @@
+$text-primary:#3F5D45;
+$text-light:#FFFFFF;
+$text-dark :#2C4832;
+$text-secondary:#FFE180;
+$text-primary2:#EAF0ED;
+$text-secondary2:#8DA291;
+
+
+$font-s: 1rem; 
+$font-m: 1.25rem; /* 20px */
+$font-l: 1.5rem; /* 24px */
+$font-xl:2.25rem; /* 36px */
+
+
+
+$mg-size:5px 20px 30px 40px 60px;
+$pd-size:5px 20px 30px 40px 60px;
+@mixin pad{
+    @media(max-width: 768px){
+      @content;
+    }
+  }
+  
+  @mixin mobile{
+    @media(max-width: 767px){
+      @content;
+    }
+  }

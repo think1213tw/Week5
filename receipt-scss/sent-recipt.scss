@@ -1,0 +1,267 @@
+.contact{
+  margin-top:nth($mg-size , 5 ) ; 
+  margin-bottom:nth($mg-size , 5 ) ; 
+  display: flex;
+  justify-content: center;
+
+}
+
+button{
+   border: none;
+}
+
+.receipt{
+   width: 50%;
+   background-color: $text-primary;
+   margin-right:nth($mg-size , 2 )  ;
+   height: 464px;
+
+
+   &-contact{
+   padding-left: nth($pd-size , 4 ) ;
+   padding-right: nth($pd-size , 4 ) ;
+   
+   }
+
+   
+   &-title{
+       position: relative;
+       display: flex;
+       justify-content: space-between;
+       h2{
+           padding-top: nth($pd-size,3);
+           padding-bottom: nth($pd-size,3);
+           font-size:$font-xl ;
+           color:$text-primary2 ;
+           font-weight: bold;
+       }
+     
+   }
+
+
+   &-sent{
+     
+       margin-bottom:nth($mg-size , 3 ) ;
+       color: $text-primary;
+       font-size: $font-m;
+       background-color: $text-primary2;                
+       display: flex;
+       
+      
+
+   }
+
+   &-way{
+       width: 100%;
+       font-size: $font-m;
+       line-height:24px;
+       border: 1px solid $text-primary2;
+       padding: 14px 28px; 
+       color: #3F5D45;
+       font-weight: bold;
+      
+   }
+
+   &-way:hover{
+    color:$text-primary2 ;
+    background-color: $text-primary;
+   }
+
+   h3{
+       font-size:  $font-m;
+       color: $text-primary2;
+       padding-bottom: 8px;
+       font-weight: bold;
+   }
+
+   &-mail{
+       border: none;
+      background-color:  $text-primary2 ;
+       width: 100%;
+       padding: nth($pd-size , 2 );
+      margin-bottom: 8px;
+   }
+   &-number{
+       border: none;
+       background-color:  $text-primary2 ;
+       width: 100%;
+       padding: nth($pd-size , 2 );
+       margin-bottom:nth($mg-size , 3);
+       
+   }
+
+   &-btn{
+       width: 100%;
+       padding: 20px;
+       font-size: $font-l ;
+       color: $text-primary;
+       background-color: $text-secondary;
+       font-weight: bold;
+       
+   }
+
+   &-btn:hover{
+       background: $text-primary2;
+       color: $text-primary;
+   }
+
+   &-img{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+      
+       position: relative;
+   }
+
+   &-icon{
+       padding-right: nth($pd-size , 5 );
+       color:white;
+  
+   }
+
+   &-circle{
+       color:white;
+       border: 1px solid white;
+       border-radius: 50%;
+     
+   }
+
+   &-line{
+       border-top: 1px solid #EAF0ED;
+       width: 64px;
+       position: absolute;
+       left: 218px;
+       top: 48px;
+  
+   }
+   &-line2{
+       border-top: 1px solid #EAF0ED;
+       width: 64px;
+       position: absolute;
+       left: 300px;
+       top: 48px;
+  
+   }
+}
+
+.details{
+   width: 33%;
+  
+}
+
+.summary{
+
+   margin-bottom: nth($mg-size , 2 );
+   &-btn{
+       font-weight: bold;
+       font-size: $font-l;
+       width: 100%;
+       padding: 16px;
+       color: $text-secondary2;
+       background-color:$text-primary2 ;
+   }
+
+   ul{
+       border: 1px solid $text-primary2;
+       padding: nth($pd-size , 2 );
+   }
+   li{
+      color: $text-secondary2;
+       display: flex;
+       justify-content: space-between;
+       padding-bottom: 8px;
+   }
+   &-last{
+       padding-top: 8px;
+       font-size: $font-m;
+       color: $text-secondary2;
+       font-weight: bold;
+   }
+}
+
+.checklis{
+
+   &-btn{
+       font-weight: bold;
+       font-size: $font-l;
+       width: 100%;
+       padding: 16px;
+       color: $text-secondary2;
+       background-color:$text-primary2 ;
+       
+   }    
+
+   &-buy{
+       display: flex;
+       padding: nth($pd-size,2 );
+       border: 1px solid $text-primary2;
+       justify-content: space-between;
+   }
+
+   &-img img{
+       display: block;
+       object-fit: cover;
+       height: 80px;
+       padding-bottom: 16px;
+   }
+   
+
+   &-text {
+       color: $text-secondary2;
+       
+       li{
+          
+           margin-top: 16px;
+       }
+   }
+
+   &-price{
+       font-size: $font-m;
+       font-weight: bold;
+   }
+ 
+}
+
+@include pad{
+   .receipt{
+   
+   &-line{
+       left: 133px;
+   }
+   &-line2{
+       left: 215px;
+   }
+   }
+   .checklis{
+   &-text{
+       margin-left: 20px;
+     
+   }
+
+   }
+}
+
+@include mobile{
+   .container{
+       max-width: 760px;
+   }
+   .details{
+   display: none;
+   }
+
+   .contact{
+       margin-bottom: 0;
+   }
+
+   .receipt{
+       width: 100%;
+       margin-right: 0;
+   &-line{
+       left: 123px;
+   }
+   &-line2{
+       left: 205px;
+   }
+   }
+  
+}

@@ -1,0 +1,130 @@
+.container{
+	max-width: 940px;
+	margin: 0 auto;
+
+}
+
+a{
+	text-decoration: none;    
+	
+}
+
+/*--------------------header內容 -------------------------- */
+
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	font-weight: bold;
+	margin-top: nth($mg-size,3);
+	margin-bottom: nth($mg-size,3);
+	position: relative;
+
+
+	.toggler{
+	display: none;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	}
+
+	.collapse{
+		display: flex;
+		
+		align-items: center;
+	
+	}
+
+	.nav{
+		display: flex;
+		align-items: center;
+		max-height: 0px;
+		
+	}
+
+	.link{
+		padding-left: nth($mg-size,3);
+	}
+
+	.link:hover{
+		color: $text-secondary;
+	}
+
+}
+
+.navbar .active {
+	max-height: 200px;
+  }
+
+  .nav{
+
+	.link{
+		padding-left: nth($mg-size,3);
+		color: $text-primary;
+		font-weight: bold;
+		padding: 0 30px;
+		display: block;
+	}
+
+	
+
+  }
+
+
+
+  /*--------------------header RWD 開始 -------------------------- */
+@media(max-width:768px){
+
+	.container{
+		max-width: 768px;
+	}
+
+
+	.navbar{
+
+		.toggler{
+			display: block;
+		
+		}
+
+		.toggler:focus {
+			outline: 0;
+		  }
+
+		  .nav{
+			position: absolute;
+			left: 0;
+			top: 100%;
+			width: 100%;
+			transition: all 0.8s;
+			overflow: hidden;       /* 讓超出預設區域的文字被隱藏起來 */
+			background: white;
+			flex-direction: column;
+			
+		}  
+
+		link {
+			padding-left: 0;
+		  }
+	}
+
+
+	.nav{
+		link {
+			padding: 10px 0;
+			text-align: center;
+		  }
+		
+		  .item {
+			color: $text-primary;
+			width: 100%;
+			text-align: center;
+		  }
+		
+		  .item:hover {
+			background-color: #EAF0ED;
+		  }
+		
+		}
+	  
+}
+/*--------------------header RWD 結束 -------------------------- */

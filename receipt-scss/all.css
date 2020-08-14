@@ -1,0 +1,632 @@
+@charset "UTF-8";
+/* 20px */
+/* 24px */
+/* 36px */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*--------------------header內容 -------------------------- */
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.navbar .toggler {
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.navbar .collapse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 0px;
+}
+
+.navbar .link {
+  padding-left: 30px;
+}
+
+.navbar .link:hover {
+  color: #FFE180;
+}
+
+.navbar .active {
+  max-height: 200px;
+}
+
+.nav .link {
+  padding-left: 30px;
+  color: #3F5D45;
+  font-weight: bold;
+  padding: 0 30px;
+  display: block;
+}
+
+/*--------------------header RWD 開始 -------------------------- */
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .navbar .toggler {
+    display: block;
+  }
+  .navbar .toggler:focus {
+    outline: 0;
+  }
+  .navbar .nav {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    overflow: hidden;
+    /* 讓超出預設區域的文字被隱藏起來 */
+    background: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar link {
+    padding-left: 0;
+  }
+  .nav link {
+    padding: 10px 0;
+    text-align: center;
+  }
+  .nav .item {
+    color: #3F5D45;
+    width: 100%;
+    text-align: center;
+  }
+  .nav .item:hover {
+    background-color: #EAF0ED;
+  }
+}
+
+/*--------------------header RWD 結束 -------------------------- */
+/* 寄送發票 */
+.contact {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+button {
+  border: none;
+}
+
+.receipt {
+  width: 50%;
+  background-color: #3F5D45;
+  margin-right: 20px;
+  height: 464px;
+}
+
+.receipt-contact {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.receipt-title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.receipt-title h2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 2.25rem;
+  color: #EAF0ED;
+  font-weight: bold;
+}
+
+.receipt-sent {
+  margin-bottom: 30px;
+  color: #3F5D45;
+  font-size: 1.25rem;
+  background-color: #EAF0ED;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.receipt-way {
+  width: 100%;
+  font-size: 1.25rem;
+  line-height: 24px;
+  border: 1px solid #EAF0ED;
+  padding: 14px 28px;
+  color: #3F5D45;
+  font-weight: bold;
+}
+
+.receipt-way:hover {
+  color: #EAF0ED;
+  background-color: #3F5D45;
+}
+
+.receipt h3 {
+  font-size: 1.25rem;
+  color: #EAF0ED;
+  padding-bottom: 8px;
+  font-weight: bold;
+}
+
+.receipt-mail {
+  border: none;
+  background-color: #EAF0ED;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 8px;
+}
+
+.receipt-number {
+  border: none;
+  background-color: #EAF0ED;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.receipt-btn {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.5rem;
+  color: #3F5D45;
+  background-color: #FFE180;
+  font-weight: bold;
+}
+
+.receipt-btn:hover {
+  background: #EAF0ED;
+  color: #3F5D45;
+}
+
+.receipt-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.receipt-icon {
+  padding-right: 60px;
+  color: white;
+}
+
+.receipt-circle {
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.receipt-line {
+  border-top: 1px solid #EAF0ED;
+  width: 64px;
+  position: absolute;
+  left: 218px;
+  top: 48px;
+}
+
+.receipt-line2 {
+  border-top: 1px solid #EAF0ED;
+  width: 64px;
+  position: absolute;
+  left: 300px;
+  top: 48px;
+}
+
+.details {
+  width: 33%;
+}
+
+.summary {
+  margin-bottom: 20px;
+}
+
+.summary-btn {
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 16px;
+  color: #8DA291;
+  background-color: #EAF0ED;
+}
+
+.summary ul {
+  border: 1px solid #EAF0ED;
+  padding: 20px;
+}
+
+.summary li {
+  color: #8DA291;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.summary-last {
+  padding-top: 8px;
+  font-size: 1.25rem;
+  color: #8DA291;
+  font-weight: bold;
+}
+
+.checklis-btn {
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 16px;
+  color: #8DA291;
+  background-color: #EAF0ED;
+}
+
+.checklis-buy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  border: 1px solid #EAF0ED;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.checklis-img img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 80px;
+  padding-bottom: 16px;
+}
+
+.checklis-text {
+  color: #8DA291;
+}
+
+.checklis-text li {
+  margin-top: 16px;
+}
+
+.checklis-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .receipt-line {
+    left: 133px;
+  }
+  .receipt-line2 {
+    left: 215px;
+  }
+  .checklis-text {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 760px;
+  }
+  .details {
+    display: none;
+  }
+  .contact {
+    margin-bottom: 0;
+  }
+  .receipt {
+    width: 100%;
+    margin-right: 0;
+  }
+  .receipt-line {
+    left: 123px;
+  }
+  .receipt-line2 {
+    left: 205px;
+  }
+}
+
+/* 寄送發票 */
+/*--------------------footer內容 -------------------------- */
+.email {
+  background-color: #3F5D45;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+.order {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.order p {
+  padding-left: 20px;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.mailIcon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 20px;
+  top: 16px;
+}
+
+.subform {
+  width: 380px;
+  position: relative;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.formail {
+  width: 80%;
+  padding: 16px 16px 16px 64px;
+  border: none;
+  line-height: 26px;
+}
+
+.forWard {
+  border: none;
+  width: 64px;
+  height: 56px;
+  background-color: #FFE180;
+}
+
+.forWard img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.send {
+  display: block;
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/arrow_forward-24px.png);
+  width: 64px;
+  position: absolute;
+  cursor: pointer;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+  top: -0.1%;
+  left: 80%;
+  background-color: #FFE180;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 表尾 */
+.footer {
+  color: #3F5D45;
+  background-color: #FFFFFF;
+}
+
+.footer-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.footer-last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.sweet img {
+  padding-top: 39px;
+  padding-bottom: 115px;
+}
+
+.sweet li {
+  line-height: 24px;
+}
+
+.today h2 {
+  padding-top: 30px;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-indent: 16px;
+  font-weight: 900;
+  line-height: 29px;
+  font-size: 1.5rem;
+}
+
+.socail ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.socail img {
+  padding-bottom: 23px;
+  padding-right: 8px;
+}
+
+/*--------------------footer RWD開始 -------------------------- */
+@media (max-width: 768px) {
+  .today h2 {
+    padding-right: 30px;
+  }
+  .all-right {
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .email {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .order {
+    padding-bottom: 30px;
+  }
+  .today h2 {
+    display: none;
+  }
+  .footer {
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 30px;
+  }
+  .footer-last {
+    display: block;
+  }
+}
+
+/*--------------------footer RWD結束 -------------------------- */
+/*# sourceMappingURL=all.css.map */

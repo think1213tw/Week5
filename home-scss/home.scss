@@ -1,0 +1,236 @@
+.banner{
+	margin-bottom: 60px;
+}
+a {
+    text-decoration: none;
+    color: #3F5D45;
+}
+
+
+
+.contact{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	
+}
+
+.dessert{
+	width: 300px;
+	color: #3F5D45;
+	text-align: center;
+	line-height:31px;
+	font-weight: bold;
+}
+.dessert li{
+
+
+	border:1px solid #EAF0ED;
+}
+
+.dessert li a{
+	padding-top: 16px;
+	padding-bottom: 16px;
+	display: block; 
+	
+}
+
+.dessert ul :hover{
+	background-color:#EAF0ED ;
+}
+
+.dessert h3{
+	background-color: #3F5D45;
+	color: white;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+/* 以上左邊選單 */
+
+
+.macaron{
+	width: 300px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+}
+
+.macaron-img{
+	position: relative;
+}
+.macaron-img p{
+	font-weight: bold;
+	font-size: 16px;
+	writing-mode: vertical-lr;
+	position: absolute;
+	left: 20px;
+	background-color:#3F5D45 ;
+	color: white;
+	padding: 10px;
+	letter-spacing: 5px;
+} 
+.favorite{
+	position: absolute;
+	right: 22px;
+	top: 19px;
+}
+.caramel{
+	color: #3F5D45;
+	display:flex;
+	justify-content: space-between;
+	
+	font-size: 20px;
+    line-height: 24px;
+
+
+}
+
+.name{
+	text-align: center;
+	width: 50%;
+    border-left: 1px solid #EAF0ED;
+    font-weight: 300;
+    padding: 14px 0;
+}
+
+
+
+.price{
+    width: 50%;
+	border-left: 1px solid #EAF0ED;
+	border-right: 1px solid #EAF0ED;
+    font-weight: 600;
+	padding: 14px 0;
+	text-align: center;
+	
+}
+
+.buycar{
+    width: 300px;
+    border: none;
+    padding-top: 16px;
+    padding-bottom: 16px;
+	font-size: 24px;
+	color: #3F5D45;
+	font-weight: bold;
+	cursor: pointer;  /* 讓使用者知道可以點選 */
+}
+
+.buycar:hover{
+	color: white;
+	background-color:#3F5D45; 
+}
+
+.product{
+	width: 620px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+
+
+/*  以上右邊選單 */
+
+
+/*--------------------contact RWD開始 -------------------------- */
+
+
+@media(max-width:768px){
+
+	.dessert{
+		width: 100%;
+	}
+
+	.dessert ul{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.dessert li {
+		width: 50%;
+	}
+	
+
+	.product{
+		justify-content: center; 
+		width: 100%;
+		padding-left: 16px;
+		padding-right: 16px;
+	
+	}
+
+}
+
+@media(max-width:767px){
+	.dessert{
+		margin-bottom: 30px
+	}
+
+	.dessert li {
+		width: 100%;
+	}
+
+	.product{
+		display: flex;
+		justify-content: center;
+	}
+
+	.email{
+		flex-wrap: wrap;
+	}
+
+	.email ul{
+		padding-bottom: 33px;
+	}
+}
+
+/*--------------------contact RWD 結束 -------------------------- */
+
+
+.type{
+	margin-bottom: 60px;
+}
+
+.type Ul{
+	display: flex;
+	justify-content: flex-end;
+	
+	
+}
+
+.type li:hover{
+	background-color: #3F5D45;
+}
+
+.typeleft, .typeright{   
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+	width: 59px;
+	border: 1px solid #EAF0ED;
+
+}
+
+
+.typenumber{
+	border: 1px solid #EAF0ED;
+	text-align: center;
+	display: block;
+    background-color: #ffffff;
+    font-size: 20px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    width: 59px;
+}
+/*  以上右下角列表 */
+/*--------------------type RWD開始 -------------------------- */
+
+@media(max-width:767px){
+
+	.type{
+		padding-right: 39px;
+	}
+}

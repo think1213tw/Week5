@@ -1,0 +1,177 @@
+
+
+/*--------------------footer內容 -------------------------- */
+.email{
+	background-color:$text-primary;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: nth($mg-size , 3 );
+
+}
+
+.order{
+	align-items: center;
+	display: flex;
+
+	p{
+		padding-left:  nth($mg-size , 2 );
+		font-size: 24px;
+		color: $text-light;
+	}
+}
+
+.mailIcon{
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	left: 20px;
+	top: 16px;
+	
+	}
+
+.subform{width: 380px;
+	position: relative;
+}
+
+.form{
+
+	display: flex;
+}
+
+.formail{
+	width: 80%;
+	padding: 16px 16px 16px 64px;
+    border: none;
+	line-height: 26px;
+}
+
+.forWard{
+    border: none;
+	width:64px ;
+	height: 56px;
+	background-color:$text-secondary;
+	
+	img{
+	width:$font-s ;
+	height: $font-s;
+	}
+}
+
+.send{
+	display: block;
+	background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/arrow_forward-24px.png);
+	width: 64px;
+	position: absolute;
+	cursor:pointer;
+	text-indent: 101%;
+	white-space: nowrap;
+	overflow: hidden;  
+	top: -0.1%;
+    left: 80%;
+	background-color: $text-secondary;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+
+
+/* 表尾 */
+
+.footer{
+	color: $text-primary;
+	background-color:$text-light;
+
+	&-main{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom:  nth($mg-size , 3 );
+	}
+
+	&-last{
+		display: flex;
+		justify-content: space-between;
+		padding-bottom:  nth($mg-size , 3 );
+	}
+}
+
+
+.sweet{
+	img{
+		padding-top: 39px;
+		padding-bottom: 115px;
+	}
+	li{
+		line-height: 24px;
+	}
+}
+
+
+.today h2{
+	padding-top:  nth($mg-size , 3 );
+	writing-mode: vertical-lr;
+	text-indent:16px;
+	font-weight: 900;
+	line-height: 29px;
+	font-size: $font-l;
+}
+
+.socail{
+	ul{
+		display: flex;
+		
+	}
+
+	img{
+		padding-bottom: 23px;
+		padding-right: 8px;
+	}
+}
+
+
+/*--------------------footer RWD開始 -------------------------- */
+
+@include pad(){
+	.today h2{
+		padding-right:  nth($mg-size , 3 );
+	}
+
+	.all-right{
+		padding-right:  nth($mg-size , 3 );
+	}
+}
+
+@include mobile(){
+	.email {
+		flex-wrap: wrap;
+	}
+	
+	.order{
+		padding-bottom: nth($mg-size,3);
+	}
+	
+
+	.today h2{
+		display: none;
+	}
+
+	.footer{
+		display: block;
+		justify-content: center;
+		padding-left:  nth($mg-size , 3 );
+
+		&-last{
+			display: block;
+			
+		}
+	}
+
+}
+
+/*--------------------footer RWD結束 -------------------------- */
+
+
+
+
